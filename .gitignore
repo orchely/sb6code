@@ -5,7 +5,6 @@ bin
 lib
 Debug
 Release
-x64
-build/vs2013/*_Debug
-build/vs2013/*_Release
+*_Debug
+*_Release
 
