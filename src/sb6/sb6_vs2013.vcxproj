@@ -79,8 +79,9 @@
     <TargetName>sb6_d32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>sb6_d32</TargetName>
+    <TargetName>sb6_d64</TargetName>
     <IncludePath>$(SolutionDir)\extern\glfw-2.7.6\include;$(SolutionDir)\include\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)\extern\glfw-2.7.6\include;$(SolutionDir)\include\;$(IncludePath)</IncludePath>
@@ -88,8 +89,9 @@
     <TargetName>sb6_r32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>sb6_r32</TargetName>
+    <TargetName>sb6_r64</TargetName>
     <IncludePath>$(SolutionDir)\extern\glfw-2.7.6\include;$(SolutionDir)\include\;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)lib\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
