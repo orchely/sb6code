@@ -447,12 +447,24 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "my", "my", "{A4F49D50-14ED-4085-B387-FDA4447C6ADE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple_application", "my\simple_application\simple_application.vcxproj", "{E6CCA928-491C-4673-87BE-05E3E77E00E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B} = {4DA03747-F505-4A98-9124-03B3B73B9B3B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "using_shaders", "my\using_shaders\using_shaders.vcxproj", "{E0F5AF42-C6FB-4487-A56A-F06743EE0C3D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B} = {4DA03747-F505-4A98-9124-03B3B73B9B3B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "first_triangle", "my\first_triangle\first_triangle.vcxproj", "{13960B37-C82D-4306-B3EB-0F3A6679F280}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B} = {4DA03747-F505-4A98-9124-03B3B73B9B3B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vertex_attributes", "my\vertex_attribures\vertex_attributes.vcxproj", "{20935083-7D3B-4E8A-9C66-E9B0638A323A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DA03747-F505-4A98-9124-03B3B73B9B3B} = {4DA03747-F505-4A98-9124-03B3B73B9B3B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
