@@ -62,7 +62,6 @@ public:
 	{
 		glDeleteVertexArrays(1, &vertex_array_object);
 		glDeleteProgram(rendering_program);
-		glDeleteVertexArrays(1, &vertex_array_object);
 	}
 
 	void render(double currentTime)

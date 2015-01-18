@@ -1,4 +1,5 @@
 #include "sb6.h"
+#include <math.h>
 
 GLuint compile_shaders(void)
 {
@@ -10,12 +11,14 @@ GLuint compile_shaders(void)
 	{
 		"#version 430 core													\n"
 		"																	\n"
+		"layout (location = 0) in vec4 offset;								\n"
+		"																	\n"
 		"void main(void)													\n"
 		"{																	\n"
 		"	const vec4 vertices[3] = vec4[3](vec4( 0.25, -0.25, 0.5, 1.0),	\n"
 		"	                                 vec4(-0.25, -0.25, 0.5, 1.0),	\n"
 		"	                                 vec4( 0.25,  0.25, 0.5, 1.0));	\n"
-		"	gl_Position = vertices[gl_VertexID];							\n"
+		"	gl_Position = vertices[gl_VertexID] + offset;					\n"
 		"}																	\n"
 	};
 
@@ -68,10 +71,25 @@ public:
 
 	void render(double currentTime)
 	{
-		const GLfloat color[] = { 0.0f, 0.2f, 0.0f, 1.0f };
+		const GLfloat color[] =
+		{
+			(float)sin(currentTime) * 0.5f + 0.5f,
+			(float)cos(currentTime) * 0.5f + 0.5f,
+			0.0f, 1.0f
+		};
+
 		glClearBufferfv(GL_COLOR, 0, color);
 
 		glUseProgram(rendering_program);
+
+		GLfloat attrib[] =
+		{
+			(float)sin(currentTime) * 0.5f,
+			(float)cos(currentTime) * 0.6f,
+			0.0f, 0.0f
+		};
+
+		glVertexAttrib4fv(0, attrib);
 
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 	}
