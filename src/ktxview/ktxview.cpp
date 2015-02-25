@@ -61,13 +61,13 @@ static const char * fs_source[] =
     "                                                                               \n"
     "uniform sampler2D s;                                                           \n"
     "                                                                               \n"
-    "uniform float exposure;\n"
-    "\n"
+	"layout (location = 0) uniform float exposure;                                  \n"
+    "                                                                               \n"
     "out vec4 color;                                                                \n"
     "                                                                               \n"
     "void main(void)                                                                \n"
     "{                                                                              \n"
-    "    color = texture(s, gl_FragCoord.xy / textureSize(s, 0)) * exposure;                   \n"
+    "    color = texture(s, gl_FragCoord.xy / textureSize(s, 0)) * exposure;        \n"
     "}                                                                              \n"
 };
 
